@@ -2,11 +2,35 @@ dependencies:
   cookie-session: 2.0.0-beta.3
   express: 4.16.3
   mongoose: 5.2.9
+  newrelic: 4.8.0
   nodemon: 1.18.3
   passport: 0.4.0
   passport-facebook: 2.1.1
   passport-google-oauth20: 1.0.0
 packages:
+  /@newrelic/koa/1.0.5:
+    dependencies:
+      methods: 1.1.2
+    dev: false
+    peerDependencies:
+      newrelic: '>=3.3.1'
+    resolution:
+      integrity: sha512-1zTojq9gW2mi0YblGrS86gCyL56+gbCn6o2+1UJJL3pFmBgp8IAMzZ93PkHHtdrbL3BnVMBrD2Q2WR32FbhIAg==
+  /@newrelic/native-metrics/3.1.0:
+    dependencies:
+      nan: 2.10.0
+    dev: false
+    engines:
+      node: '>=0.12'
+      npm: '>=2'
+    optional: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-45OhFKiRT5L+hBzAkDkR5UTuHWIUNMjwlMlu65Y8HmyrTPtgUMKoqMmHERRX4aRqb/EEaW3oWYYLOpLnB6fiHg==
+  /@tyriar/fibonacci-heap/2.0.7:
+    dev: false
+    resolution:
+      integrity: sha512-DANf9u0VN5oWrRk31B+xCy9mMNx1H9YhWUaTzCzU0uBruj/zg8u9JSw5qpArntvfJxaW/gWGWbQtzpAkYO6VBg==
   /abbrev/1.1.1:
     dev: false
     resolution:
@@ -20,6 +44,14 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-63d99gEXI6OxTopywIBcjoZ0a9I=
+  /agent-base/4.2.1:
+    dependencies:
+      es6-promisify: 5.0.0
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-JVwXMr9nHYTUXsBFKUqhJwvlcYU/blreOEUkhNR2eXZIvwd+c+o5V4MgDPKWnMS/56awN3TRzIP+KoPn+roQtg==
   /ansi-align/2.0.0:
     dependencies:
       string-width: 2.1.1
@@ -193,6 +225,10 @@ packages:
       node: '>=0.6.19'
     resolution:
       integrity: sha512-9Aeai9TacfNtWXOYarkFJRW2CWo+dRon+fuLZYJmvLV3+MiUp0bEI6IAZfXEIg7/Pl/7IWlLaDnhzTsD81etQA==
+  /buffer-from/1.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
   /bytes/3.0.0:
     dev: false
     engines:
@@ -304,6 +340,17 @@ packages:
     dev: false
     resolution:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+  /concat-stream/1.6.2:
+    dependencies:
+      buffer-from: 1.1.1
+      inherits: 2.0.3
+      readable-stream: 2.3.6
+      typedarray: 0.0.6
+    dev: false
+    engines:
+      '0': node >= 0.8
+    resolution:
+      integrity: sha512-27HBghJxjiZtIk3Ycvn/4kbJk/1uZuJFfuPEns6LaEvpvG1f0hTea8lilrouyo9mVc2GWdcEZ8OLoGmSADlrCw==
   /configstore/3.1.2:
     dependencies:
       dot-prop: 4.2.0
@@ -482,6 +529,16 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
+  /es6-promise/4.2.4:
+    dev: false
+    resolution:
+      integrity: sha512-/NdNZVJg+uZgtm9eS3O6lrOLYmQag2DjdEXuPaHlZ6RuVqgqaVZfgYCepEIKsLqwdQArOPtC3XzRLqGGfT8KQQ==
+  /es6-promisify/5.0.0:
+    dependencies:
+      es6-promise: 4.2.4
+    dev: false
+    resolution:
+      integrity: sha1-UQnWLz5W6pZ8S2NQWu8IKRyKUgM=
   /escape-html/1.0.3:
     dev: false
     resolution:
@@ -789,6 +846,15 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-i1VoC7S+KDoLW/TqLjhYC+HZMg0=
+  /https-proxy-agent/2.2.1:
+    dependencies:
+      agent-base: 4.2.1
+      debug: 3.1.0
+    dev: false
+    engines:
+      node: '>= 4.5.0'
+    resolution:
+      integrity: sha512-HPCTS1LW51bcyMYbxUIOO4HEOlQ1/1qRaFWcyxvwaqUS9TY88aoEuHUY33kuAh1YhVVaDQhLZsnPd+XNARWZlQ==
   /iconv-lite/0.4.19:
     dev: false
     engines:
@@ -1029,6 +1095,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
+  /json-stringify-safe/5.0.1:
+    dev: false
+    resolution:
+      integrity: sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
   /kareem/2.2.1:
     dev: false
     resolution:
@@ -1293,6 +1363,25 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
+  /newrelic/4.8.0:
+    dependencies:
+      '@newrelic/koa': 1.0.5
+      '@tyriar/fibonacci-heap': 2.0.7
+      async: 2.6.1
+      concat-stream: 1.6.2
+      https-proxy-agent: 2.2.1
+      json-stringify-safe: 5.0.1
+      readable-stream: 2.3.6
+      semver: 5.5.1
+    dev: false
+    engines:
+      node: '>=4.0.0 <11.0.0'
+      npm: '>=2.0.0'
+    hasBin: true
+    optionalDependencies:
+      '@newrelic/native-metrics': 3.1.0
+    resolution:
+      integrity: sha512-eteq0KPDBoG6lnNhRspf7I+dyWcXkcBZpFjekQ2CZM43XhOg9XM6/gaylzGqfuDqZ4Ld62OhddTrZhG73FLgUQ==
   /nodemon/1.18.3:
     dependencies:
       chokidar: 2.0.4
@@ -1978,6 +2067,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-HRkVv/5qY2G6I8iab9cI7v1bOIdhm94dVjQCPFElW9W+3GeDOSHmy2EBYe4VTApuzolPcmgFTN3ftVJRKR2J9Q==
+  /typedarray/0.0.6:
+    dev: false
+    resolution:
+      integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
   /uid2/0.0.3:
     dev: false
     resolution:
@@ -2125,6 +2218,7 @@ specifiers:
   cookie-session: ^2.0.0-beta.3
   express: ^4.16.3
   mongoose: ^5.2.9
+  newrelic: ^4.8.0
   nodemon: ^1.18.3
   passport: ^0.4.0
   passport-facebook: ^2.1.1

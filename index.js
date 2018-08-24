@@ -1,3 +1,4 @@
+require("newrelic");
 const cookieSession = require("cookie-session");
 const express = require("express");
 const mongooge = require("mongoose");
