@@ -31,7 +31,7 @@ passport.use(
         const existingUser = await User.findOne({ googleId: profile.id });
 
         if (existingUser) {
-          return done(null, user);
+          return done(null, existingUser);
         }
         const user = await new User({
           googleId: profile.id
@@ -57,7 +57,7 @@ passport.use(
         const existingUser = await User.findOne({ facebookId: profile.id });
 
         if (existingUser) {
-          return done(null, user);
+          return done(null, existingUser);
         }
         const user = await new User({
           facebookId: profile.id
