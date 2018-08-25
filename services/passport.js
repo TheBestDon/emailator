@@ -26,20 +26,20 @@ passport.use(
       callbackURL: "/auth/google/callback",
       proxy: true
     },
-    (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleId: profile.id })
-        .then(user => {
-          if (user) {
-            done(null, user);
-          } else {
-            new User({
-              googleId: profile.id
-            })
-              .save()
-              .then(user => done(null, user));
-          }
-        })
-        .catch(err => console.log("GOOGLE STRATEGY" + err));
+    async (accessToken, refreshToken, profile, done) => {
+      try {
+        const existingUser = await User.findOne({ googleId: profile.id });
+
+        if (existingUser) {
+          return done(null, existingUser);
+        }
+        const user = await new User({
+          googleId: profile.id
+        }).save();
+        done(null, user);
+      } catch (error) {
+        console.log("GOOGLE STRATEGY" + error);
+      }
     }
   )
 );
@@ -52,20 +52,20 @@ passport.use(
       callbackURL: "/auth/facebook/callback",
       proxy: true
     },
-    (accessToken, refreshToken, profile, done) => {
-      User.findOne({ facebookId: profile.id })
-        .then(user => {
-          if (user) {
-            done(null, user);
-          } else {
-            new User({
-              facebookId: profile.id
-            })
-              .save()
-              .then(user => done(null, user));
-          }
-        })
-        .catch(err => console.log("FACEBOOK STRATEGY" + err));
+    async (accessToken, refreshToken, profile, done) => {
+      try {
+        const existingUser = await User.findOne({ facebookId: profile.id });
+
+        if (existingUser) {
+          return done(null, existingUser);
+        }
+        const user = await new User({
+          facebookId: profile.id
+        }).save();
+        done(null, user);
+      } catch (error) {
+        console.log("FACEBOOK STRATEGY" + error);
+      }
     }
   )
 );
