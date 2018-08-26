@@ -3,6 +3,7 @@ dependencies:
   materialize-css: 0.100.2
   react-redux: 5.0.7
   react-router-dom: 4.3.1
+  react-stripe-checkout: 2.6.3
   redux: 4.0.0
   redux-thunk: 2.3.0
 packages:
@@ -155,6 +156,10 @@ packages:
       react: '>=15'
     resolution:
       integrity: sha512-yrvL8AogDh2X42Dt9iknk4wF4V8bWREPirFfS9gLU1huk6qK41sg7Z/1S81jjTrGHxa3B8R3J6xIkDAA6CVarg==
+  /react-stripe-checkout/2.6.3:
+    dev: false
+    resolution:
+      integrity: sha1-MXOocLBOWjwyGgbSTNU8YDARHEU=
   /redux-thunk/2.3.0:
     dev: false
     resolution:
@@ -200,5 +205,6 @@ specifiers:
   materialize-css: ^0.100.2
   react-redux: ^5.0.7
   react-router-dom: ^4.3.1
+  react-stripe-checkout: ^2.6.3
   redux: ^4.0.0
   redux-thunk: ^2.3.0
