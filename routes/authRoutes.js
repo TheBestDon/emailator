@@ -16,16 +16,12 @@ module.exports = app => {
     }
   );
 
-  app.get("/auth/facebook", passport.authenticate("facebook"));
-
-  app.get("/auth/facebook/callback", passport.authenticate("facebook"));
-
   app.get("/api/logout", (req, res) => {
     req.logout();
     res.redirect("/");
   });
 
   app.get("/api/current_user", (req, res) => {
-    res.json(req.user);
+    res.send(req.user);
   });
 };
