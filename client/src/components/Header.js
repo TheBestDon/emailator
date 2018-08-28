@@ -38,17 +38,15 @@ class Header extends Component {
             className="left brand-logo">
             Emailator
           </Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            {this.renderContent()}
-          </ul>
+          <ul className="right">{this.renderContent()}</ul>
         </div>
       </nav>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  auth: state.auth
-});
+function mapStateToProps({ auth }) {
+  return { auth };
+}
 
 export default connect(mapStateToProps)(Header);

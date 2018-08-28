@@ -1,10 +1,12 @@
 dependencies:
   axios: 0.18.0
+  lodash: 4.17.10
   materialize-css: 0.100.2
   react-redux: 5.0.7
   react-router-dom: 4.3.1
   react-stripe-checkout: 2.6.3
   redux: 4.0.0
+  redux-form: 7.4.2
   redux-thunk: 2.3.0
 packages:
   /axios/0.18.0:
@@ -20,6 +22,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+  /es6-error/4.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-Um/+FxMr9CISWh0bi5Zv0iOD+4cFh5qLeks1qhAopKVAJw3drgKbKySikp7wGhDL0HPeaja0P5ULZrxLkniUVg==
   /follow-redirects/1.5.7:
     dependencies:
       debug: 3.1.0
@@ -58,6 +64,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
+  /is-promise/2.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-eaKp7OfwlugPNtKy87wWwf9L8/o=
   /isarray/0.0.1:
     dev: false
     resolution:
@@ -115,6 +125,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3pboPvLiWD7dkI3qf3KbUe6hKFKa52w+AE0VCqECtf+QHAKgOL37tTaNCnuX1nAAQ4ZhyP+kYVKf8rLmJ/feDQ==
+  /react-lifecycles-compat/3.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
   /react-redux/5.0.7:
     dependencies:
       hoist-non-react-statics: 2.5.5
@@ -160,6 +174,23 @@ packages:
     dev: false
     resolution:
       integrity: sha1-MXOocLBOWjwyGgbSTNU8YDARHEU=
+  /redux-form/7.4.2:
+    dependencies:
+      es6-error: 4.1.1
+      hoist-non-react-statics: 2.5.5
+      invariant: 2.2.4
+      is-promise: 2.1.0
+      lodash: 4.17.10
+      lodash-es: 4.17.10
+      prop-types: 15.6.2
+      react-lifecycles-compat: 3.0.4
+    dev: false
+    peerDependencies:
+      react: ^15.0.0-0 || ^16.0.0-0
+      react-redux: ^4.3.0 || ^5.0.0
+      redux: ^3.0.0 || ^4.0.0
+    resolution:
+      integrity: sha512-QxC36s4Lelx5Cr8dbpxqvl23dwYOydeAX8c6YPmgkz/Dhj053C16S2qoyZN6LO6HJ2oUF00rKsAyE94GwOUhFA==
   /redux-thunk/2.3.0:
     dev: false
     resolution:
@@ -202,9 +233,11 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   axios: ^0.18.0
+  lodash: ^4.17.10
   materialize-css: ^0.100.2
   react-redux: ^5.0.7
   react-router-dom: ^4.3.1
   react-stripe-checkout: ^2.6.3
   redux: ^4.0.0
+  redux-form: ^7.4.2
   redux-thunk: ^2.3.0
